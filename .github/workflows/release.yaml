@@ -46,6 +46,7 @@ jobs:
           ghcr.io/${{ github.repository_owner }}/shaka-packager
         tags: |
           type=semver,pattern={{major}}.{{minor}},value=${{ matrix.version }}
+          type=semver,pattern={{major}}.{{minor}}.{{patch}},value=${{ matrix.version }}
 
     - name: Setup
       id: config
