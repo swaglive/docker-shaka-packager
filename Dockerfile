@@ -48,6 +48,7 @@ FROM    alpine:3.15
 
 RUN     apk add --no-cache --virtual .run-deps \
             libstdc++ \
+            c-ares \
             python3
 
 COPY    --from=builder /shaka_packager/src/out/Release/packager \
