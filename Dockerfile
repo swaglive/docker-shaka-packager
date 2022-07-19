@@ -1,4 +1,4 @@
-FROM    alpine:3.15 as builder
+FROM    alpine:3.16.1 as builder
 
 ARG     version=2.6.1
 
@@ -44,7 +44,7 @@ RUN     ninja -C src/out/Release
 
 ###
 
-FROM    alpine:3.15
+FROM    alpine:3.16.1
 
 RUN     apk add --no-cache --virtual .run-deps \
             libstdc++ \
