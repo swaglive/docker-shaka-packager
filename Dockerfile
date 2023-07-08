@@ -50,6 +50,8 @@ RUN     ninja -C src/out/Release
 
 FROM    ${base}
 
+ENTRYPOINT ["packager"]
+
 RUN     apk add --no-cache --virtual .run-deps \
             libstdc++ \
             c-ares \
