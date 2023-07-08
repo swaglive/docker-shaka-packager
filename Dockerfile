@@ -54,7 +54,8 @@ RUN     apk add --no-cache --virtual .run-deps \
             libstdc++ \
             c-ares \
             python2 \
-            python3
+            python3 && \
+        ln -sf python3 /usr/bin/python
 
 COPY    --from=builder /shaka_packager/src/out/Release/packager \
             /shaka_packager/src/out/Release/mpd_generator \
