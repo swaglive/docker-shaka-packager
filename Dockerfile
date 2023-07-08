@@ -1,4 +1,8 @@
-FROM    alpine:3.18 as builder
+ARG     base=alpine:3.15
+
+###
+
+FROM    ${base} as builder
 
 ARG     version=
 
@@ -44,7 +48,7 @@ RUN     ninja -C src/out/Release
 
 ###
 
-FROM    alpine:3.18
+FROM    ${base}
 
 RUN     apk add --no-cache --virtual .run-deps \
             libstdc++ \
