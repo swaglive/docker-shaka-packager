@@ -1,6 +1,6 @@
 FROM    alpine:3.18 as builder
 
-ARG     version=2.6.1
+ARG     version=
 
         # Install utilities, libraries, and dev tools.
 RUN     apk add --no-cache \
