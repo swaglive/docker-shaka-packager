@@ -53,6 +53,7 @@ FROM    ${base}
 RUN     apk add --no-cache --virtual .run-deps \
             libstdc++ \
             c-ares \
+            python2 \
             python3
 
 COPY    --from=builder /shaka_packager/src/out/Release/packager \
